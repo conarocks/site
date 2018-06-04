@@ -1,13 +1,32 @@
-# Install the apt prerequisites
-addons:
-  apt:
-    packages:
-      - python-pygments
-# Clean and don't fail
+language: go
+
+go:
+  - 1.7
+
+sudo: false
+
+git:
+  depth: 10
+
+branches:
+  only:
+    - master
+
+env:
+  global:
+    - SOURCE_DIR="public"
+    - BUILD_BRANCH="source"
+    - DEPLOY_BRANCH="master"
+
 install:
-  - rm -rf public || exit 0
-# Build the website
+  - go get -u -v github.com/spf13/hugo
+
 script:
-  - binaries/hugo --theme=fresh
+  - hugo
 
-
+deploy:
+  - provider: pages
+    edge: true
+    github_token: ${GITHUB_TOKEN}
+    local_dir: public
+    skip_cleanup: true
