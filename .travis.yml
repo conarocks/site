@@ -14,13 +14,8 @@ script:
   - "./bin/hugo"
 
 deploy:
-  local_dir: public 
-  repo: conarocks/conarocks.github.io 
-  target_branch: master 
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN 
-  email: geral@cona.rocks
-  name: "Cona Rocks"
   on:
     branch: master
