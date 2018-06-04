@@ -14,7 +14,8 @@ script:
   - "./bin/hugo"
 
 deploy:
-  provider: master
+  provider: pages
+  local-dir: public
   skip_cleanup: true
   github_token: $GITHUB_TOKEN 
   on:
