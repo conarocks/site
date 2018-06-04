@@ -10,6 +10,8 @@ contentdir = "content"
 datadir = "data"
 layoutdir = "layouts"
 publishdir = "public"
+canonifyURLs = true
+
 
 [params]
     # Meta
