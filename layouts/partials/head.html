@@ -5,7 +5,7 @@
 		<meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}" />
 		<meta name="keywords" content="{{ with .Site.Params.keywords }}{{ . }}{{ end }}" />
 		<meta name="author" content="{{ with .Site.Params.author }}{{ . }}{{ end }}" />
-		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" href="favicon.ico" />
 		{{ .Hugo.Generator }}
 		<style>
 		body {
@@ -13,9 +13,9 @@
 		color: {{ .Site.Params.bodytextcolor }};
 		}
 		</style>
-		<link rel="stylesheet" type="text/css" href="/css/default.css" />
-		<link rel="stylesheet" type="text/css" href="/css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		{{ range .Site.Params.custom_css }}
 			<link rel="stylesheet" href="{{ . }}">
 		{{ end }}
-		<script src="/js/modernizr.custom.js"></script>
+		<script src="js/modernizr.custom.js"></script>
